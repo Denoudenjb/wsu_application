@@ -85,7 +85,7 @@ class HomeRoute extends StatelessWidget {
               Navigator.push(
                 context,
                 MaterialPageRoute(
-                  builder: (context) => _MyHomePageState(
+                  builder: (context) => RequestInfo(
                   ),
                 ),
               );
@@ -220,8 +220,8 @@ class DocumentsPage extends StatelessWidget {
   }
 }
 
-class PhoneDirectory extends StatelessWidget {
-  const PhoneDirectory({super.key});
+class RequestInfo extends StatelessWidget {
+  const RequestInfo({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -261,14 +261,39 @@ class PhoneDirectory extends StatelessWidget {
   }
 }
 
-class _MyHomePageState extends StatelessWidget {
+class PhoneDirectory extends StatelessWidget {
+  const PhoneDirectory({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: const Text('PhoneDirectory'),
+        backgroundColor: Colors.blue,
+      ),
       body: Center(
         child:
             // ignore: sort_child_properties_last
-            ElevatedButton(child: Text('Create Excel'), onPressed: createExcel),
+            ElevatedButton(child: Text('Export Excel to Phone'), onPressed: createExcel),
+      ),
+      bottomNavigationBar: BottomAppBar(
+        color: Colors.blue,
+        child: SizedBox(
+          height: 60.0,
+          child: Row(
+            children: <Widget>[
+              IconButton(
+                icon: const Icon(Icons.home),
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => const HomeRoute()),
+                  );
+                },
+              )
+            ],
+          ),
+        ),
       ),
     );
   }
