@@ -86,8 +86,7 @@ class HomeRoute extends StatelessWidget {
               Navigator.push(
                 context,
                 MaterialPageRoute(
-                  builder: (context) => RequestInfo(
-                  ),
+                  builder: (context) => RequestInfo(),
                 ),
               );
             },
@@ -97,20 +96,6 @@ class HomeRoute extends StatelessWidget {
           color: Colors.blue,
           child: SizedBox(
             height: 60.0,
-            child: Row(
-              children: <Widget>[
-                IconButton(
-                  icon: const Icon(Icons.home),
-                  onPressed: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => const HomeRoute()),
-                    );
-                  },
-                )
-              ],
-            ),
           ),
         ),
       ),
@@ -124,21 +109,20 @@ class UpcomingEvents extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('UpcomingEvents'),
-        backgroundColor: Colors.blue,
-      ),
-
-      body: SfCalendar(
-      view: CalendarView.timelineWeek,
-      firstDayOfWeek: 6,
-      dataSource: MeetingDataSource(_getDataSource()),
-      // by default the month appointment display mode set as Indicator, we can
-      // change the display mode as appointment using the appointment display
-      // mode property
-      monthViewSettings: const MonthViewSettings(
-          appointmentDisplayMode: MonthAppointmentDisplayMode.appointment),
-    ));
+        appBar: AppBar(
+          title: const Text('UpcomingEvents'),
+          backgroundColor: Colors.blue,
+        ),
+        body: SfCalendar(
+          view: CalendarView.timelineWeek,
+          firstDayOfWeek: 6,
+          dataSource: MeetingDataSource(_getDataSource()),
+          // by default the month appointment display mode set as Indicator, we can
+          // change the display mode as appointment using the appointment display
+          // mode property
+          monthViewSettings: const MonthViewSettings(
+              appointmentDisplayMode: MonthAppointmentDisplayMode.appointment),
+        ));
   }
 
   List<Meeting> _getDataSource() {
@@ -148,11 +132,10 @@ class UpcomingEvents extends StatelessWidget {
     final DateTime endTime = startTime.add(const Duration(hours: 2));
     meetings.add(Meeting(
         'Conference', startTime, endTime, const Color(0xFF0F8644), false));
-      meetings.add(Meeting(
-      'training', startTime, endTime, Color.fromARGB(255, 82, 41, 148), false));
+    meetings.add(Meeting('training', startTime, endTime,
+        Color.fromARGB(255, 82, 41, 148), false));
     return meetings;
   }
-  
 }
 
 class MeetingDataSource extends CalendarDataSource {
@@ -261,19 +244,6 @@ class DocumentsPage extends StatelessWidget {
         color: Colors.blue,
         child: SizedBox(
           height: 60.0,
-          child: Row(
-            children: <Widget>[
-              IconButton(
-                icon: const Icon(Icons.home),
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => const HomeRoute()),
-                  );
-                },
-              )
-            ],
-          ),
         ),
       ),
     );
@@ -302,19 +272,6 @@ class RequestInfo extends StatelessWidget {
         color: Colors.blue,
         child: SizedBox(
           height: 60.0,
-          child: Row(
-            children: <Widget>[
-              IconButton(
-                icon: const Icon(Icons.home),
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => const HomeRoute()),
-                  );
-                },
-              )
-            ],
-          ),
         ),
       ),
     );
@@ -334,25 +291,13 @@ class PhoneDirectory extends StatelessWidget {
       body: Center(
         child:
             // ignore: sort_child_properties_last
-            ElevatedButton(child: Text('Export Excel to Phone'), onPressed: createExcel),
+            ElevatedButton(
+                child: Text('Export Excel to Phone'), onPressed: createExcel),
       ),
       bottomNavigationBar: BottomAppBar(
         color: Colors.blue,
         child: SizedBox(
           height: 60.0,
-          child: Row(
-            children: <Widget>[
-              IconButton(
-                icon: const Icon(Icons.home),
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => const HomeRoute()),
-                  );
-                },
-              )
-            ],
-          ),
         ),
       ),
     );
@@ -397,7 +342,6 @@ class PhoneDirectory extends StatelessWidget {
     sheet.getRangeByName('D7').setText('(316)XXX-XXX');
     sheet.getRangeByName('D8').setText('(316)XXX-XXX');
     sheet.getRangeByName('D9').setText('(316)XXX-XXX');
-
 
     final List<int> bytes = workbook.saveAsStream();
     workbook.dispose();
