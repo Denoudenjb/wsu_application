@@ -211,12 +211,30 @@ class HelpfulLinks extends StatelessWidget {
         title: const Text('Helpful Links'),
         backgroundColor: Colors.blue,
       ),
-      body: Center(),
+      body: Center(
+    @override
+      Widget build(BuildContext context) {
+        return Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: <Widget>[
+            const Padding(
+              padding: EdgeInsets.symmetric(horizontal:8, vertical:16),
+              child: TextField(
+                decoration: InputDecoration(
+                  border: OutlineInputBorder(),
+                  hintText: 'Enter Link',
+                ),
+              ),
+            ),
+          ],
+        );
+      }
       bottomNavigationBar: BottomAppBar(
         color: Colors.blue,
         child: SizedBox(
           height: 60.0,
         ),
+      ),
       ),
     );
   }
