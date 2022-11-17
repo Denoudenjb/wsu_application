@@ -211,10 +211,8 @@ class HelpfulLinks extends StatelessWidget {
         title: const Text('Helpful Links'),
         backgroundColor: Colors.blue,
       ),
-      body: Center(
-    @override
-      Widget build(BuildContext context) {
-        return Column(
+
+ body: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
             const Padding(
@@ -226,9 +224,9 @@ class HelpfulLinks extends StatelessWidget {
                 ),
               ),
             ),
-          ],
-        );
-      }
+          ],     
+      ),
+
       bottomNavigationBar: BottomAppBar(
         color: Colors.blue,
         child: SizedBox(
