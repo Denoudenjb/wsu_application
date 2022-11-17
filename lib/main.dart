@@ -235,8 +235,7 @@ class HelpfulLinks extends StatelessWidget {
           height: 60.0,
         ),
       ),
-      ),
-    );
+    ));
   }
 }
 
