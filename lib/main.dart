@@ -1,4 +1,4 @@
-// ignore_for_file: prefer_const_constructors, unnecessary_string_escapes
+// ignore_for_file: prefer_const_constructors, unnecessary_string_escapes, prefer_const_literals_to_create_immutables, sort_child_properties_last, duplicate_ignore
 import 'package:flutter/material.dart';
 import 'package:syncfusion_flutter_xlsio/xlsio.dart' hide Row, Column;
 import 'dart:io';
@@ -233,7 +233,7 @@ class HelpfulLinks extends StatelessWidget {
           height: 60.0,
         ),
       ),
-    ));
+    );
   }
 }
 
