@@ -8,6 +8,7 @@ import 'package:universal_html/html.dart' show AnchorElement;
 import 'package:flutter/foundation.dart' show kIsWeb;
 import 'dart:convert';
 import 'package:syncfusion_flutter_calendar/calendar.dart';
+import 'package:flutter/services.dart' show rootBundle;
 
 void main() {
   runApp(const MaterialApp(
@@ -377,3 +378,24 @@ class PhoneDirectory extends StatelessWidget {
     }
   }
 }
+
+class DataRow {
+  String name;
+  int age;
+
+  DataRow(this.name, this.age);
+}
+
+  Future<String> readTable() async {
+    try {
+      final file = File("assets/res/table.txt");
+
+      // Read the file
+      String contents = await file.readAsString();
+      print(contents);
+      return contents;
+    } catch (e) {
+      // If we encounter an error, return empty string
+      return "";
+    }
+  }
