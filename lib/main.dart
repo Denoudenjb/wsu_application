@@ -114,7 +114,7 @@ class UpcomingEvents extends StatelessWidget {
           backgroundColor: Colors.blue,
         ),
         body: SfCalendar(
-          view: CalendarView.timelineWeek,
+          view: CalendarView.timelineMonth,
           firstDayOfWeek: 6,
           dataSource: MeetingDataSource(_getDataSource()),
           // by default the month appointment display mode set as Indicator, we can
