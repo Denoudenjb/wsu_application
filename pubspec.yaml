@@ -68,8 +68,8 @@ dev_dependencies:
 # The following section is specific to Flutter packages.
 flutter:
   assets:
-    - assets/phone_directory.xlsx
-    - images/plane.jpg
+    - assets/images/
+    - assets/
 
 
 
