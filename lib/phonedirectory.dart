@@ -30,7 +30,7 @@ class PhoneDirectory extends StatelessWidget {
       bottomNavigationBar: BottomAppBar(
         color: Colors.blue,
         child: SizedBox(
-          height: 60.0,
+          height: 40.0,
         ),
       ),
     );
