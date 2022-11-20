@@ -8,7 +8,7 @@ class Calendarevents extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: const Text('Calendarevents'),
+          title: const Text('Calendar Events'),
           backgroundColor: Colors.blue,
         ),
         body: SfCalendar(
@@ -30,9 +30,13 @@ class Calendarevents extends StatelessWidget {
     final DateTime endTime = startTime.add(const Duration(hours: 2));
     meetings.add(Meeting(
         'Conference', startTime, endTime, const Color(0xFF0F8644), false));
-    meetings.add(Meeting('training', startTime, endTime,
+    meetings.add(Meeting(
+        'training',
+        startTime,
+        endTime,
         // ignore: prefer_const_constructors
-        Color.fromARGB(255, 82, 41, 148), false));
+        Color.fromARGB(255, 82, 41, 148),
+        false));
     return meetings;
   }
 }

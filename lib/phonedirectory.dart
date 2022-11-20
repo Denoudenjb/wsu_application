@@ -1,4 +1,3 @@
-
 // ignore_for_file: prefer_const_constructors, sort_child_properties_last, duplicate_ignore
 
 import 'package:flutter/material.dart';
@@ -10,7 +9,6 @@ import 'package:universal_html/html.dart' show AnchorElement;
 import 'package:flutter/foundation.dart' show kIsWeb;
 import 'dart:convert';
 
-
 class PhoneDirectory extends StatelessWidget {
   const PhoneDirectory({super.key});
 
@@ -18,7 +16,7 @@ class PhoneDirectory extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('PhoneDirectory'),
+        title: const Text('Phone Directory'),
         backgroundColor: Colors.blue,
       ),
       body: Center(

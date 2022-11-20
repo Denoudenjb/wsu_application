@@ -5,13 +5,13 @@ class Pictureviewer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) => Scaffold(
-        appBar: AppBar(
-          title: Text('PhoneDirectory'),
-          backgroundColor: Colors.blue,
-        ),
-        body: Container(
-          height:150,
-          child: ListView(
+      appBar: AppBar(
+        title: Text('Phone Directory'),
+        backgroundColor: Colors.blue,
+      ),
+      body: Container(
+        height: 150,
+        child: ListView(
           scrollDirection: Axis.horizontal,
           children: [
             buildCard(),

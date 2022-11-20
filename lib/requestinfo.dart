@@ -9,7 +9,7 @@ class RequestInfo extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('RequestInfo'),
+        title: const Text('Request Info'),
         backgroundColor: Colors.blue,
       ),
       body: Center(
