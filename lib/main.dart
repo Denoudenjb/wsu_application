@@ -19,7 +19,7 @@ class HomeRoute extends StatelessWidget {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          title: const Text("Air Force App"),
+          title: const Text("WSU_Project"),
           backgroundColor: Colors.blue,
         ),
         body: 
