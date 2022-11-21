@@ -23,52 +23,8 @@ class Pictureviewer extends StatelessWidget {
           ),
         ),
       );
-
-  Widget buildCard({
-    required CardItem item,
-  }) =>
-      // ignore: sized_box_for_whitespace
-      Container(
-        width: 200,
-        child: Column(
-          children: [
-            Expanded(
-              child: AspectRatio(
-                aspectRatio: 4 / 3,
-                child: ClipRRect(
-                  borderRadius: BorderRadius.circular(20),
-                  child: Material(
-                    child: Ink.image(
-                      image: NetworkImage(item.urlImage),
-                      fit: BoxFit.cover,
-                      child: InkWell(
-                        onTap: () => Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => Fullsizepicture(
-                              item: item,
-                            ),
-                          ),
-                        ),
-                      ),
-                    ),
-                  ),
-                ),
-              ),
-            ),
-            const SizedBox(height: 4),
-            Text(
-              item.title,
-              style: TextStyle(fontSize: 24, color: Colors.black),
-            ),
-            Text(
-              item.subtitle,
-              style: TextStyle(fontSize: 20, color: Colors.black),
-            ),
-          ],
-        ),
-      );
 }
+ 
 
 class CardItem {
   final String urlImage;
