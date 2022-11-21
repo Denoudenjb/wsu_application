@@ -1,6 +1,5 @@
 // ignore_for_file: prefer_const_constructors, must_be_immutabl, prefer_const_constructors_in_immutables, must_be_immutable
 import 'package:flutter/material.dart';
-import 'package:wsu_application/fullsizepicture.dart';
 
 class Pictureviewer extends StatelessWidget {
    Pictureviewer({super.key});
@@ -11,20 +10,63 @@ class Pictureviewer extends StatelessWidget {
           title: Text('Picture Viewer'),
           centerTitle: true,
         ),
-        // ignore: sized_box_for_whitespace
-        body: Container(
+
+        body: SizedBox(
           height: 256,
           child: ListView.separated(
             padding: EdgeInsets.all(16),
             scrollDirection: Axis.horizontal,
             itemCount: 6,
             separatorBuilder: (context, _) => SizedBox(width: 12),
-            itemBuilder: (context, index) => buildCard(item: items[index]),
+            itemBuilder: (context, index) => buildPictureCards(item: items[index]),
           ),
         ),
+        bottomNavigationBar: BottomAppBar(
+          color: Colors.blue,
+          child: SizedBox(
+            height: 40.0,
+        ),
+      ),
+    );
+  }
+
+  Widget buildPictureCards({required CardItem item,}) =>
+      SizedBox(
+        width: 200,
+        child: Column(
+          children: [
+            Expanded(
+              child: AspectRatio(
+                aspectRatio: 4 / 3,
+                child: ClipRRect(
+                  borderRadius: BorderRadius.circular(20),
+                  child: Material(
+                    child: Ink.image(
+                      image: NetworkImage(item.urlImage),
+                      fit: BoxFit.cover,
+                  
+            
+                            ),
+                          ),
+                        ),
+                      ),
+                    ),
+
+                
+            const SizedBox(height: 4),
+            Text(
+              item.title,
+              style: TextStyle(fontSize: 24, color: Colors.black),
+            ),
+            Text(
+              item.subtitle,
+              style: TextStyle(fontSize: 20, color: Colors.black),
+            ),
+          ],
+        ),
       );
-}
- 
+      
+
 
 class CardItem {
   final String urlImage;
