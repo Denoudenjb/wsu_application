@@ -8,12 +8,12 @@ import 'requestinfo.dart';
 
 void main() {
   runApp(const MaterialApp(
-    home: HomeRoute(),
+    home: MyHomePage(),
   ));
 }
 
-class HomeRoute extends StatelessWidget {
-  const HomeRoute({Key? key}) : super(key: key);
+class MyHomePage extends StatelessWidget {
+  const MyHomePage({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
