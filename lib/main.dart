@@ -19,11 +19,10 @@ class MyHomePage extends StatelessWidget {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          title: const Text("WSU_Project"),
+          title: const Text("WSU Project"),
           backgroundColor: Colors.blue,
         ),
-        body: 
-        ListView(children:  <Widget>[
+        body: ListView(children: <Widget>[
           ListTile(
             leading: Icon(Icons.calendar_month, size: 50),
             title: Text('Upcoming Events'),
