@@ -16,16 +16,23 @@ class HelpfulLinks extends StatelessWidget {
  body: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
-            const Padding(
-              padding: EdgeInsets.symmetric(horizontal:8, vertical:16),
-              child: TextField(
+              TextField(
                 decoration: InputDecoration(
                   border: OutlineInputBorder(),
                   hintText: 'Enter Link',
                 ),
               ),
-            ),
-          ],     
+              TextField(
+                decoration: InputDecoration(
+                  border: OutlineInputBorder(),
+                  hintText: 'other information',
+                ),
+              ),
+              ElevatedButton(
+                child: Text('Export Data'), onPressed:
+                (){}, // Do something when pressed
+          ),
+        ],     
       ),
 
       // ignore: prefer_const_constructors
