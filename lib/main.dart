@@ -8,18 +8,18 @@ import 'requestinfo.dart';
 
 void main() {
   runApp(const MaterialApp(
-    home: HomeRoute(),
+    home: MyHomePage(),
   ));
 }
 
-class HomeRoute extends StatelessWidget {
-  const HomeRoute({Key? key}) : super(key: key);
+class MyHomePage extends StatelessWidget {
+  const MyHomePage({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          title: const Text("Air Force App"),
+          title: const Text("WSU_Project"),
           backgroundColor: Colors.blue,
         ),
         body: 
