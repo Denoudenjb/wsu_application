@@ -13,26 +13,26 @@ class HelpfulLinks extends StatelessWidget {
         backgroundColor: Colors.blue,
       ),
 
- body: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: <Widget>[
-              TextField(
-                decoration: InputDecoration(
-                  border: OutlineInputBorder(),
-                  hintText: 'Enter Link',
-                ),
-              ),
-              TextField(
-                decoration: InputDecoration(
-                  border: OutlineInputBorder(),
-                  hintText: 'other information',
-                ),
-              ),
-              ElevatedButton(
-                child: Text('Export Data'), onPressed:
-                (){}, // Do something when pressed
+      body: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: <Widget>[
+          TextField(
+            decoration: InputDecoration(
+              border: OutlineInputBorder(),
+              hintText: 'Enter Link',
+            ),
           ),
-        ],     
+          TextField(
+            decoration: InputDecoration(
+              border: OutlineInputBorder(),
+              hintText: 'Desciption of Link',
+            ),
+          ),
+          ElevatedButton(
+            child: Text('Export Data'),
+            onPressed: () {}, // Do something when pressed
+          ),
+        ],
       ),
 
       // ignore: prefer_const_constructors
