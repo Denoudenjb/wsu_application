@@ -12,7 +12,8 @@ class Pictureviewer extends StatelessWidget {
         ),
 
         body: SizedBox(
-          height: 256,
+          height: 300,
+          
           child: ListView.separated(
             padding: EdgeInsets.all(16),
             scrollDirection: Axis.horizontal,
@@ -32,7 +33,7 @@ class Pictureviewer extends StatelessWidget {
 
   Widget buildPictureCards({required CardItem item,}) =>
       SizedBox(
-        width: 200,
+        width: 300,
         child: Column(
           children: [
             Expanded(
@@ -53,7 +54,7 @@ class Pictureviewer extends StatelessWidget {
                     ),
 
                 
-            const SizedBox(height: 4),
+            const SizedBox(height: 1),
             Text(
               item.title,
               style: TextStyle(fontSize: 24, color: Colors.black),
