@@ -21,9 +21,9 @@ class PhoneDirectory extends StatelessWidget {
       ),
       body: Center(
         child:
-            // ignore: sort_child_properties_last
+
             ElevatedButton(
-                child: Text('Export Excel to Phone'), onPressed: createExcel),
+                child: Text('Export Excel File to Current Device'), onPressed: createExcel),
       ),
       bottomNavigationBar: BottomAppBar(
         color: Colors.blue,
