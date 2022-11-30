@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_const_constructors, duplicate_ignore
+
 import 'package:flutter/material.dart';
 import 'package:syncfusion_flutter_calendar/calendar.dart';
 
@@ -12,10 +14,11 @@ class Calendarevents extends StatelessWidget {
           backgroundColor: Colors.blue,
         ),
         body: SfCalendar(
-          view: CalendarView.timelineWeek,
+          view: CalendarView.month,
+          
           dataSource: MeetingDataSource(_getDataSource()),
-          monthViewSettings: const MonthViewSettings(
-              appointmentDisplayMode: MonthAppointmentDisplayMode.appointment),
+          monthViewSettings: MonthViewSettings(
+            showAgenda: true),
         ));
   }
 

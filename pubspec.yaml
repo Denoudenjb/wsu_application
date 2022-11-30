@@ -47,7 +47,7 @@ dependencies:
   syncfusion_localizations: ^20.3.56
   desktop_window: ^0.4.0
   url_launcher: ^5.2.7
-  photo_view: ^0.13.0
+  photo_view: ^0.14.0
   flutter_svg: ^1.1.6
   flutter_form_builder: ^7.7.0
   form_builder_validators: ^8.4.0
