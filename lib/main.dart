@@ -84,7 +84,7 @@ class MyHomePage extends StatelessWidget {
               Navigator.push(
                 context,
                 MaterialPageRoute(
-                  builder: (context) => RequestInfo(),
+                  builder: (context) => CompleteForm(),
                 ),
               );
             },
