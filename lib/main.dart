@@ -20,10 +20,19 @@ class MyHomePage extends StatelessWidget {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          title: const Text("WSU Project"),
+          title: const Text("931st Air Refueling Wing"),
           backgroundColor: Colors.blue,
         ),
-        body: ListView(children: <Widget>[
+        body:
+
+Container(
+        decoration: BoxDecoration(
+          image: DecorationImage(
+            image: AssetImage("assets/images/plane.png"),
+            fit: BoxFit.cover,
+          ),
+        ),
+        child: ListView(children: <Widget>[
           ListTile(
             leading: Icon(Icons.calendar_month, size: 50),
             title: Text('Upcoming Events'),
@@ -89,7 +98,7 @@ class MyHomePage extends StatelessWidget {
               );
             },
           ),
-        ]),
+        ])),
         bottomNavigationBar: BottomAppBar(
           color: Colors.blue,
           child: SizedBox(
