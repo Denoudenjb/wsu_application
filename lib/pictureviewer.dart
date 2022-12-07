@@ -23,7 +23,7 @@ class Pictureviewer extends StatelessWidget {
           ),
         ),
         bottomNavigationBar: BottomAppBar(
-          color: Colors.blue,
+          color: Color.fromARGB(255, 7, 90, 158),
           child: SizedBox(
             height: 40.0,
         ),
@@ -33,7 +33,7 @@ class Pictureviewer extends StatelessWidget {
 
   Widget buildPictureCards({required CardItem item,}) =>
       SizedBox(
-        width: 300,
+        width: 600,
         child: Column(
           children: [
             Expanded(
@@ -54,7 +54,7 @@ class Pictureviewer extends StatelessWidget {
                     ),
 
                 
-            const SizedBox(height: 1),
+            const SizedBox(height: 10),
             Text(
               item.title,
               style: TextStyle(fontSize: 24, color: Colors.black),

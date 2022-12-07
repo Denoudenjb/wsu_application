@@ -21,17 +21,18 @@ class MyHomePage extends StatelessWidget {
       home: Scaffold(
         appBar: AppBar(
           title: const Text("931st Air Refueling Wing"),
-          backgroundColor: Colors.blue,
+          backgroundColor: Color.fromARGB(255, 7, 90, 158),
         ),
         body:
-
 Container(
-        decoration: BoxDecoration(
+        constraints: const BoxConstraints.expand(),
+        decoration: const 
+        
+        BoxDecoration(
           image: DecorationImage(
             image: AssetImage("assets/images/plane.png"),
             fit: BoxFit.cover,
-          ),
-        ),
+          )),
         child: ListView(children: <Widget>[
           ListTile(
             leading: Icon(Icons.calendar_month, size: 50),
@@ -100,9 +101,9 @@ Container(
           ),
         ])),
         bottomNavigationBar: BottomAppBar(
-          color: Colors.blue,
+          color: Color.fromARGB(255, 7, 90, 158),
           child: SizedBox(
-            height: 40.0,
+            height: 20.0,
           ),
         ),
       ),

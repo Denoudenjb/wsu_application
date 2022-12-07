@@ -11,7 +11,7 @@ class Calendarevents extends StatelessWidget {
     return Scaffold(
         appBar: AppBar(
           title: const Text('Calendar Events'),
-          backgroundColor: Colors.blue,
+          backgroundColor: Color.fromARGB(255, 7, 90, 158),
         ),
         body: SfCalendar(
           view: CalendarView.month,

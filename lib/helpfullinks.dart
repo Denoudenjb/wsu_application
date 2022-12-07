@@ -10,7 +10,7 @@ class HelpfulLinks extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Helpful Links'),
-        backgroundColor: Colors.blue,
+        backgroundColor: Color.fromARGB(255, 7, 90, 158),
       ),
 
       body: Column(
@@ -37,7 +37,7 @@ class HelpfulLinks extends StatelessWidget {
 
       // ignore: prefer_const_constructors
       bottomNavigationBar: BottomAppBar(
-        color: Colors.blue,
+        color: Color.fromARGB(255, 7, 90, 158),
         child: SizedBox(
           height: 40.0,
         ),

@@ -17,7 +17,7 @@ class PhoneDirectory extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Phone Directory'),
-        backgroundColor: Colors.blue,
+        backgroundColor: Color.fromARGB(255, 7, 90, 158),
       ),
       body: Center(
         child:
@@ -26,7 +26,7 @@ class PhoneDirectory extends StatelessWidget {
                 child: Text('Export Excel File to Current Device'), onPressed: createExcel),
       ),
       bottomNavigationBar: BottomAppBar(
-        color: Colors.blue,
+        color: Color.fromARGB(255, 7, 90, 158),
         child: SizedBox(
           height: 40.0,
         ),
