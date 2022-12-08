@@ -8,24 +8,26 @@ class Pictureviewer extends StatelessWidget {
   Widget build(BuildContext context) => Scaffold(
         appBar: AppBar(
           title: Text('Picture Viewer'),
+         backgroundColor: Color.fromARGB(255, 7, 90, 158), 
           centerTitle: true,
         ),
 
         body: SizedBox(
-          height: 300,
+          height: 375,
           
           child: ListView.separated(
             padding: EdgeInsets.all(16),
             scrollDirection: Axis.horizontal,
             itemCount: 6,
-            separatorBuilder: (context, _) => SizedBox(width: 12),
+            separatorBuilder: (context, _) => SizedBox(width: 5),
             itemBuilder: (context, index) => buildPictureCards(item: items[index]),
           ),
         ),
+
         bottomNavigationBar: BottomAppBar(
           color: Color.fromARGB(255, 7, 90, 158),
           child: SizedBox(
-            height: 40.0,
+            height: 20.0,
         ),
       ),
     );
@@ -33,7 +35,7 @@ class Pictureviewer extends StatelessWidget {
 
   Widget buildPictureCards({required CardItem item,}) =>
       SizedBox(
-        width: 600,
+        width: 350,
         child: Column(
           children: [
             Expanded(

@@ -39,7 +39,7 @@ class HelpfulLinks extends StatelessWidget {
       bottomNavigationBar: BottomAppBar(
         color: Color.fromARGB(255, 7, 90, 158),
         child: SizedBox(
-          height: 40.0,
+          height: 20.0,
         ),
       ),
     );

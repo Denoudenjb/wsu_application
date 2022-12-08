@@ -28,7 +28,7 @@ class PhoneDirectory extends StatelessWidget {
       bottomNavigationBar: BottomAppBar(
         color: Color.fromARGB(255, 7, 90, 158),
         child: SizedBox(
-          height: 40.0,
+          height: 20.0,
         ),
       ),
     );
@@ -65,14 +65,14 @@ class PhoneDirectory extends StatelessWidget {
     sheet.getRangeByName('C8').setText('DISTRO');
     sheet.getRangeByName('C9').setText('PROD');
     sheet.getRangeByName('D1').setText('Phone Number');
-    sheet.getRangeByName('D2').setText('(316)XXX-XXX');
-    sheet.getRangeByName('D3').setText('(316)XXX-XXX');
-    sheet.getRangeByName('D4').setText('(316)XXX-XXX');
-    sheet.getRangeByName('D5').setText('(316)XXX-XXX');
-    sheet.getRangeByName('D6').setText('(316)XXX-XXX');
-    sheet.getRangeByName('D7').setText('(316)XXX-XXX');
-    sheet.getRangeByName('D8').setText('(316)XXX-XXX');
-    sheet.getRangeByName('D9').setText('(316)XXX-XXX');
+    sheet.getRangeByName('D2').setText('(316)123-4567');
+    sheet.getRangeByName('D3').setText('(316)123-4567');
+    sheet.getRangeByName('D4').setText('(316)123-4567');
+    sheet.getRangeByName('D5').setText('(316)123-4567');
+    sheet.getRangeByName('D6').setText('(316)123-4567');
+    sheet.getRangeByName('D7').setText('(316)123-4567');
+    sheet.getRangeByName('D8').setText('(316)123-4567');
+    sheet.getRangeByName('D9').setText('(316)123-4567');
 
     final List<int> bytes = workbook.saveAsStream();
     workbook.dispose();

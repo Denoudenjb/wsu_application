@@ -103,7 +103,12 @@ Container(
         bottomNavigationBar: BottomAppBar(
           color: Color.fromARGB(255, 7, 90, 158),
           child: SizedBox(
-            height: 20.0,
+            height: 30.0,
+            child: (Text('Collaboration App', textAlign: TextAlign.center, style: TextStyle(
+                fontSize: 20,
+                color: Colors.white,
+                )))
+            
           ),
         ),
       ),
